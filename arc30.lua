@@ -1,28 +1,11 @@
-local library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShaddowScripts/Main/main/Library"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/exploiting/main/EngoUILIB_V2.lua", true))()
 
-local Main = library:CreateWindow("Test","Crimson")
+local main = library:CreateMain("Yes", "", Enum.KeyCode.LeftAlt)
 
-local tab = Main:CreateTab("Cheats")
-local tab2 = Main:CreateTab("Misc")
+local tab = main:CreateTab("Yes TAB")
 
-tab:CreateButton("Hi",function()
-print("clicked")
-end)
+tab:CreateLabel("Main")
 
-tab:CreateToggle("Farm",function(a)
-print(a)
-end)
-
-tab:CreateSlider("Speed",1,100,function(speed)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
-end)
-
-tab:CreateCheckbox("Aimbot",function(a)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-end)
-
-tab2:CreateButton("Hello",function()
-print("clicked")
-end)
-
-tab:Show()
+tab:CreateToggle("Toggle", function(value)
+   
+end);
